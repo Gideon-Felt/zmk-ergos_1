@@ -106,7 +106,7 @@
                      >;
               };
               fn_layer {
-// (NOTE: replacing &trans layer with &to 0 "MOD" so that I can jump back to the base layer when I start to type instead of staying stuck on the upper layer, don't need to think as much).
+// (NOTE: replacing &trans layer with &to 0 "MOD" to reset to base layer reduce cognative load after using layer).
 //     ----------------------------------------------------------------         ----------------------------------------------------------------
 //     |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |                                                   |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
 //     |      |      |      |      |      |      |                                                   |      |      |      |      |      |      |
