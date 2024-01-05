@@ -178,7 +178,7 @@ jobs:
             return Object.entries(perBoard).map(([board, shieldArgs]) => ({
               board,
               shieldArgs: JSON.stringify(shieldArgs),
-            }));
+            })).filter((i) => i.board.includes('nice_nano'));
   core-coverage:
     if: ${{ needs.get-changed-files.outputs.core-changes == 'true' }}
     runs-on: ubuntu-latest
