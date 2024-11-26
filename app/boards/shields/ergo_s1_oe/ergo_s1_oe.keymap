@@ -10,9 +10,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
- #define DEFAULT 0
- #define FN      1
- #define NUMPD   2
+#define DEFAULT 0
+#define FN      1
+#define NUMPD   2
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -27,13 +27,14 @@
        combos {
               compatible = "zmk,combos";
               
-              COMBO(go_to_function_layer, &tog FN, 53 54);
-              COMBO(go_to_numpd_layer, &tog NUMPD, 53 55);
-              COMBO(bt_profile_one, &bt BT_SEL 0, 53 1);
-              COMBO(bt_profile_two, &bt BT_SEL 1, 53 2);
-              COMBO(bt_profile_three, &bt BT_SEL 2, 53 3);
-              COMBO(bt_profile_four, &bt BT_SEL 3, 53 4);
-              COMBO(bt_profile_five, &bt BT_SEL 4, 53 5);
+              COMBO(zmk_studio_unlock,    &studio_unlock, 53 0)
+              COMBO(go_to_function_layer, &tog FN, 53 54)
+              COMBO(go_to_numpd_layer,    &tog NUMPD, 53 55)
+              COMBO(bt_profile_one,       &bt BT_SEL 0, 53 1)
+              COMBO(bt_profile_two,       &bt BT_SEL 1, 53 2)
+              COMBO(bt_profile_three,     &bt BT_SEL 2, 53 3)
+              COMBO(bt_profile_four,      &bt BT_SEL 3, 53 4)
+              COMBO(bt_profile_five,      &bt BT_SEL 4, 53 5)
        };
 
        macros {
@@ -145,6 +146,9 @@
                    &to 0   &to 0    &to 0    &to 0               &to 0     &to 0     &to 0         &to 0     &to 0     &kp N0              &to 0      &to 0     &kp DOT   &kp ENTER
                                                                                      &to 0         &to 0 
                      >;
+              };
+              extra1 {
+                     status = "reserved";
               };
     };
 };
